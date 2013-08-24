@@ -1,5 +1,6 @@
-class globals : GLib.Object
+class global : GLib.Object
 {
 	public Player player;
 	public int maxx, maxy;
+	
 }
