@@ -38,10 +38,30 @@ class Player : GLib.Object
 
 	public void down()
 	{
-		if(this.y < global.maxy)
+		if(this.y < global.maxy -1)
 		{
 			this.undraw();
 			this.y++;
+			this.draw();
+		}
+	}
+
+	public void left()
+	{
+		if(this.x > 0)
+		{
+			this.undraw();
+			this.x--;
+			this.draw();
+		}
+	}
+
+	public void right()
+	{
+		if(this.x < global.maxx -1)
+		{
+			this.undraw();
+			this.x++;
 			this.draw();
 		}
 	}

@@ -14,15 +14,21 @@ class game : GLib.Object
 	{
 		for(input = getch() ; player.alive && input != 'q' ; input = getch())
 		{
+			mvprintw(10,10,"%d", input);
 			switch(input)
 			{
-				case 0402://KEY_DOWN as defined in usr/include/ncurses.h:1412
+				case 66://KEY_DOWN as observed by printing the value of input
 				     player.down();
 				     break;
-				case 0403://KEY_UP as defined in /usr/include/ncurses.h:1413
+				case 65://KEY_UP as observed by printing the value of input
 				     player.up();
 				     break;
-				
+				case 68:
+				     player.left();
+				     break;
+				case 67:
+				     player.right();
+				     break;
 			}
 			/*draw some environment*/
 			/*check for collisions*/
