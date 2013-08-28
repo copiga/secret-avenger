@@ -8,6 +8,8 @@ class game : GLib.Object
 	public static void init()
 	{
 		player = new Player();
+		global.score = 0;
+		global.scorex=global.scorey=0;
 	}
 
 	public static void gameloop()
@@ -33,9 +35,17 @@ class game : GLib.Object
 				     player.right();
 				     break;
 			}
+			increase_score(1);
+
 			/*draw some environment*/
 			/*check for collisions*/
 		}
 	
 	}
-}
+
+	private static void increase_score(int by)
+	{
+		global.score+=by;
+		mvprintw(global.scorey, global.scorex, "%d", global.score);
+	}
+}		

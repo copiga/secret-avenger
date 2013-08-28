@@ -32,6 +32,7 @@ class Player : GLib.Object
 		{
 			this.undraw();
 			this.y--;
+			this.sprite = '^';
 			this.draw();
 		}
 	}
@@ -42,6 +43,7 @@ class Player : GLib.Object
 		{
 			this.undraw();
 			this.y++;
+			this.sprite = 'V';
 			this.draw();
 		}
 	}
@@ -52,6 +54,7 @@ class Player : GLib.Object
 		{
 			this.undraw();
 			this.x--;
+			this.sprite = '<';
 			this.draw();
 		}
 	}
@@ -62,6 +65,7 @@ class Player : GLib.Object
 		{
 			this.undraw();
 			this.x++;
+			this.sprite = '>';
 			this.draw();
 		}
 	}
