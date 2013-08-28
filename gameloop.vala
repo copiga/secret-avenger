@@ -2,7 +2,7 @@ using Curses;
 
 class game : GLib.Object
 {
-	private static char input;
+	private static int input;
 	public static Player player;
 
 	public static void init()
@@ -12,7 +12,7 @@ class game : GLib.Object
 
 	public static void gameloop()
 	{
-		while(player.alive && input != 'q')
+		for(input = getch() ; player.alive && input != 'q' ; input = getch())
 		{
 			/*draw some environment*/
 			/*check for collisions*/
