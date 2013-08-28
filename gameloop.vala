@@ -3,7 +3,7 @@ using Curses;
 class game : GLib.Object
 {
 	private static char input;
-	public Player player;
+	public static Player player;
 
 	public static void init()
 	{
