@@ -13,6 +13,7 @@ class Player : GLib.Object
 		this.y = global.maxy/2;
 		this.x = global.maxx/2;
 		this.alive = true;
+		this.draw();
 	}
 
 	private void draw()

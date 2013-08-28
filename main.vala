@@ -7,6 +7,8 @@ int main(string[] args)
 		usage(args);
 		return 1;
 	}
+	global.maxy = int.parse(args[2]);/*this is not right, it works but it feels wrong...*/
+	global.maxx = int.parse(args[3]);/*these should both be one less...*/
 	initscr();
 	raw();
 	noecho();
@@ -19,5 +21,5 @@ int main(string[] args)
 
 void usage(string[] args)
 {
-	stdout.printf("to use this programme please use the following command:\n%s `termsize`", args[0]);
+	stdout.printf("to use this programme please use the following command:\n%s `termsize`\n", args[0]);
 }

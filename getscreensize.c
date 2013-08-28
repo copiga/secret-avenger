@@ -7,6 +7,6 @@ int main(void)
   initscr();
   getmaxyx(stdscr,y,x);
   endwin();
-  printf("%d %d", y, x);
+  printf(" %d %d", y, x);/*requires oddness in main.vala...*/
   return 0;
 }
