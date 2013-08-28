@@ -1,15 +1,23 @@
 using Curses;
 
-int main()
+int main(string[] args)
 {
+	if(args.length <3)
+	{
+		usage(args);
+		return 1;
+	}
 	initscr();
 	raw();
 	noecho();
-	//	keypad(stdscr, true); /*THIS IS NOT C LEARN THE REST OF NCURSES*/
 	halfdelay(1);
-	//	getmaxyx(global.maxy, global.maxx); /*FOLLOW THE PREVIOUS*/
 	game.init();
 	game.gameloop();
 	endwin();
 	return 0;
+}
+
+void usage(string[] args)
+{
+	stdout.printf("to use this programme please use the following command:\n%s `termsize`", args[0]);
 }
