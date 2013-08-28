@@ -14,7 +14,6 @@ class game : GLib.Object
 	{
 		for(input = getch() ; player.alive && input != 'q' ; input = getch())
 		{
-			mvprintw(10,10,"%d", input);
 			switch(input)
 			{
 				case 66://KEY_DOWN as observed by printing the value of input
