@@ -14,7 +14,7 @@ class game : GLib.Object
 
 	public static void gameloop()
 	{
-		for(input = getch() ; player.alive && input != 'q' ; input = getch())
+		for(input = getch() ; player.alive && input != 'q' ; input = getch())	/*itll do...*/
 		{
 			switch(input)
 			{

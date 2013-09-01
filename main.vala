@@ -2,7 +2,7 @@ using Curses;
 
 int main(string[] args)
 {
-	if(args.length <3)
+	if(args.length <4)
 	{
 		usage(args);
 		return 1;
