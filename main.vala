@@ -4,7 +4,7 @@ int main(string[] args)
 {
 	if(args.length <4)
 	{
-		usage(args);
+		stdout.printf("to use this programme please use the following command:\n%s `termsize`\n", args[0]);
 		return 1;
 	}
 	global.maxy = int.parse(args[2]);/*this is not right, it works but it feels wrong...*/
@@ -17,9 +17,4 @@ int main(string[] args)
 	game.gameloop();
 	endwin();
 	return 0;
-}
-
-void usage(string[] args)
-{
-	stdout.printf("to use this programme please use the following command:\n%s `termsize`\n", args[0]);
 }
