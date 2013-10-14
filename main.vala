@@ -2,6 +2,9 @@ using Curses;
 
 int main(string[] args)
 {
+	string name = "null"; //add a string so that this will compile, must be pre-assigned
+	FileStream scores = FileStream.open("scores", "a");
+	
 	if(args.length <4)
 	{
 		stdout.printf("to use this programme please use the following command:\n%s `termsize`\n", args[0]);
@@ -16,5 +19,10 @@ int main(string[] args)
 	game.init();
 	game.gameloop();
 	endwin();
+	
+	stdout.printf("your score is %d. please enter your name for the leaderboard\n", global.score);
+	stdin.scanf(" %s", name);
+	scores.printf("%s\t%d\n", name, global.score);
+	
 	return 0;
 }
