@@ -19,11 +19,15 @@ int main(string[] args)
 	game.init();
 	game.gameloop();
 	endwin();
-	
-	stdout.printf("your score is %d. please enter your name for the leaderboard\n", global.score);
-	stdout.flush();
-	stdin.scanf(" %s", name);
-	scores.printf("%s\t%d\n", name, global.score);
+
+	if(args[4] != "q")
+	{
+		stdout.printf("your score is %d. please enter your name for the leaderboard\n", global.score);
+		stdout.flush();
+		stdin.scanf(" %s", name);
+		scores.printf("%s\t%d\n", name, global.score);
+	}
+
 	
 	return 0;
 }
