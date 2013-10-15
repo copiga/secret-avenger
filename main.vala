@@ -21,6 +21,7 @@ int main(string[] args)
 	endwin();
 	
 	stdout.printf("your score is %d. please enter your name for the leaderboard\n", global.score);
+	stdout.flush();
 	stdin.scanf(" %s", name);
 	scores.printf("%s\t%d\n", name, global.score);
 	
